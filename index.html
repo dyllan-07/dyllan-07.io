@@ -3,151 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dyllan Han — AI Systems, Behavioral Tools, Research</title>
-  <meta name="description" content="Portfolio focused on agency, intentionality, and self-authored growth. AI systems, behavioral tools, and research designed to challenge comfort and drive meaningful action.">
+  <title>Dyllan Han</title>
+  <meta name="theme-color" content="#EEE8DF" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#181410" media="(prefers-color-scheme: dark)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Animated Background Grid -->
-  <div class="grid-background"></div>
 
-  <!-- Navigation -->
-  <nav class="container" style="padding-top: var(--space-4); padding-bottom: var(--space-4); border-bottom: 1px solid var(--color-gray-dark);">
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-      <a href="index.html" class="mono upper" style="font-weight: 600; color: var(--color-white);">DH</a>
-      <div style="display: flex; gap: var(--space-4);">
-        <a href="#work" class="mono" style="color: var(--color-white);">Projects</a>
-        <a href="writing.html" class="mono" style="color: var(--color-white);">Writing</a>
-        <a href="beauty.html" class="mono" style="color: var(--color-white);">Beauty</a>
-        <a href="#contact" class="mono" style="color: var(--color-white);">Contact</a>
-      </div>
-    </div>
-  </nav>
+  <div class="grain"></div>
 
-  <!-- Hero Section -->
-  <section class="section" style="min-height: 80vh; display: flex; align-items: center; padding-top: 0;">
-    <div class="container">
-      <div class="hero-grid" style="display: grid; grid-template-columns: 1fr 500px; gap: var(--space-8); align-items: center;">
+  <div class="wrap">
 
-        <!-- Left: Main content -->
-        <div>
-          <h2 class="glitch-text" style="font-size: 5rem; margin-bottom: var(--space-2);">Dyllan Han</h2>
-          <p class="mono upper blue glitch-text" style="margin-bottom: var(--space-4); font-size: var(--text-xl);">AI Researcher @ Stanford University</p>
-          <a href="#work" class="btn glitch-text" style="padding: var(--space-4) var(--space-6); font-size: var(--text-2xl); margin-bottom: var(--space-4); display: inline-block;">See Projects</a>
-          <br>
-          <a href="#about" class="btn glitch-text" style="padding: var(--space-4) var(--space-6); font-size: var(--text-2xl);">About Me</a>
-        </div>
+    <header>
+      <p class="site-name">Dyllan Han</p>
+    </header>
 
-        <!-- Right: Visitor counter animation -->
-        <div>
-          <div style="border: 1px solid var(--color-gray-dark); padding: var(--space-4);">
-            <p style="font-size: var(--text-2xl); margin-bottom: var(--space-1);">
-              You are visitor
-            </p>
-            <p id="visitor-count" style="font-size: var(--text-4xl); font-weight: 700; margin-bottom: var(--space-3);">
-              ---
-            </p>
-            <div style="position: relative; width: 100%; height: 400px; border: 1px solid var(--color-blue); box-shadow: 0 0 20px var(--color-blue), 0 0 40px rgba(0, 128, 255, 0.5);">
-              <canvas id="visitor-canvas" style="width: 100%; height: 100%; display: block;"></canvas>
-            </div>
-            <!-- Your Tower Animation Script (with DB logic added) -->
-            <script type = "module" src="supabase-client.js"></script>
-            <script type = "module" src="visitor-animation.js"></script>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="section border-top">
-    <div class="container">
-      <div class="grid" style="grid-template-columns: 1fr 2fr; gap: var(--space-8); align-items: start;">
-        <div>
-          <h2 class="glitch-text" style="font-size: 5rem; margin-bottom: var(--space-4);">About Me</h2>
-          <img src="images/Me.png" alt="Dyllan Han" style="width: 110%; display: block;">
-        </div>
-        <div style="padding-top: 8rem;">
-          <p style="font-size: var(--text-2xl); margin-bottom: var(--space-4);">
-            I'm a Stanford undergrad studying Symbolic Systems <br>
-            —concentrating in Artificial Intelligence. <br> <br>
-            I build to increase human agency. <br> I believe AI has ENORMOUS potential to increase human agency, <br> if we build with care.<br> <br>
-            I strongly believe in the projects of self-awareness <br> 
-             and systematic self-improvement. <br> I enjoy journaling, meditation, rejection-therapy, <br>
-             appreciating art and communicating with pathos. <br> <br>
-
-            
-
-             <br>
-
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Work Section Placeholder i-->
-  <section id="work" class="section border-top">
-    <div class="container">
-      <h2 class="glitch-text" style="font-size: 5rem; margin-bottom: var(--space-6);">Projects</h2>
-
-      <!-- Projects will go here -->
-      <div class="grid grid-2" style="gap: var(--space-8);">
-
-        <!-- Project Card Template -->
-        <div>
-          <a href="https://failsafe.onrender.com" target="_blank" style="display: block; text-decoration: none;">
-            <div class="btn-glow" style="aspect-ratio: 16/9; background: var(--color-gray-dark); margin-bottom: var(--space-3); border: 1px solid var(--color-blue); overflow: hidden;">
-              <img src="images/FailSafe.jpg" alt="FailSafe" style="width: 100%; height: 100%; object-fit: cover; transform: scale(1.2);">
-            </div>
+    <main>
+      <ul class="project-list">
+        <li>
+          <a href="https://contextoverflow.co/#/" target="_blank" rel="noopener noreferrer" class="project-link">
+            Context Overflow <span class="arrow">↗</span>
           </a>
-          <p class="mono upper" style="font-size: var(--text-xs); color: var(--color-blue); margin-bottom: var(--space-1);">AI System</p>
-          <h3 class="glitch-text" style="margin-bottom: var(--space-2);">FailSafe</h3>
-          <p style="color: var(--color-white); font-size: var(--text-xl);">An AI Application for Addiction Recovery</p>
-        </div>
-
-        <div>
-          <a href="https://arxiv.org/pdf/2510.01395" target="_blank" style="display: block; text-decoration: none;">
-            <div class="btn-glow" style="aspect-ratio: 16/9; background: var(--color-gray-dark); margin-bottom: var(--space-3); border: 1px solid var(--color-blue); overflow: hidden;">
-              <img src="images/Research.png" alt="LLM Sycophancy Research" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
+          <p class="project-desc">A social platform for AI agents to solve real-world problems. Winner, Stanford × Google DeepMind Hackathon.</p>
+        </li>
+        <li>
+          <a href="https://arxiv.org/pdf/2510.01395" target="_blank" rel="noopener noreferrer" class="project-link">
+            LLM Sycophancy <span class="arrow">↗</span>
           </a>
-          <p class="mono upper" style="font-size: var(--text-xs); color: var(--color-blue); margin-bottom: var(--space-1);">Behavioral Tool</p>
-          <h3 class="glitch-text" style="margin-bottom: var(--space-2);"><a href="https://arxiv.org/pdf/2510.01395" target="_blank" style="color: var(--color-white); text-decoration: none;">LLM Sycophancy Research</a></h3>
-          <p style="color: var(--color-white); font-size: var(--text-xl);">Research with the Stanford AI Lab on the phenomenon of LLM Sycophancy</p>
-        </div>
+          <p class="project-desc">Research with the Stanford AI Lab on why language models agree when they shouldn't. Published in <em>Science</em>.</p>
+        </li>
+      </ul>
+    </main>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section border-top">
-    <div class="container">
-      <div class="grid" style="grid-template-columns: 1fr 2fr; gap: var(--space-8);">
-        <div>
-          <h2 class="glitch-text" style="font-size: 5rem; margin-bottom: var(--space-4);">Contact</h2>
-        </div>
-        <div>
-          <div style="display: flex; flex-direction: column; gap: var(--space-3);">
-            <a class="mono" style="color: var(--color-blue); font-size: var(--text-xl); text-shadow: 0 0 10px var(--color-blue), 0 0 20px var(--color-blue), 0 0 30px var(--color-blue);">dyllanh [at] stanford.edu</a>
-            <a href="https://github.com/dyllan-07" class="mono" style="color: var(--color-blue); font-size: var(--text-xl); text-shadow: 0 0 10px var(--color-blue), 0 0 20px var(--color-blue), 0 0 30px var(--color-blue);">GitHub</a>
-            <a href="https://www.linkedin.com/in/dyllan-han/" class="mono" style="color: var(--color-blue); font-size: var(--text-xl); text-shadow: 0 0 10px var(--color-blue), 0 0 20px var(--color-blue), 0 0 30px var(--color-blue);">LinkedIn</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="border-top" style="padding: var(--space-6) 0;">
-    <div class="container">
-      <p class="mono" style="font-size: var(--text-xs); color: var(--color-gray-mid);">
-        © 2025 Dyllan Han. Built with intention.
-      </p>
-    </div>
-  </footer>
+  </div>
 
 </body>
 </html>
