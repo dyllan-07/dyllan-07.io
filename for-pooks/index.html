@@ -815,9 +815,21 @@
   }
   .space-back:hover{ color: #f3e8d2; }
   body.in-space.arrived .space-back{ opacity: 1; pointer-events: auto; }
+
+  /* the page opens from black: a full-screen veil that fades away once everything has loaded */
+  .fade-in-veil{
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: #000;
+    pointer-events: none;
+    transition: opacity 2.4s ease;
+  }
+  .fade-in-veil.gone{ opacity: 0; }
 </style>
 </head>
 <body>
+<div class="fade-in-veil" id="fadeInVeil" aria-hidden="true"></div>
 <canvas class="warp-canvas" id="warpCanvas" aria-hidden="true"></canvas>
 <div class="sparkle" id="sparkle">
   <img class="sparkle-img" src="sparkle.png" alt="">
@@ -2284,6 +2296,20 @@
     });
     shrinkStoredImages().then(function(){ PAGE_NUMS.forEach(renderPhotos); });
   }
+
+  // lift the black veil once the images have loaded (or after 3s at most, so it never hangs)
+  (function(){
+    var veil = document.getElementById('fadeInVeil'), lifted = false;
+    function lift(){
+      if(lifted) return;
+      lifted = true;
+      veil.classList.add('gone');
+      setTimeout(function(){ veil.remove(); }, 2600);
+    }
+    if(document.readyState === 'complete') setTimeout(lift, 200);
+    else window.addEventListener('load', function(){ setTimeout(lift, 200); });
+    setTimeout(lift, 3000);
+  })();
 
   if(document.readyState === 'loading'){
     document.addEventListener('DOMContentLoaded', init);
