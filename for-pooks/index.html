@@ -1128,6 +1128,7 @@
 </div><!-- /.scene: book -->
 
 <script src="page-flip.local.js"></script>
+<script src="book-content.js"></script>
 <script>
 (function(){
   "use strict";
@@ -1216,10 +1217,14 @@
   }
 
   /* ---------------- storage (browser localStorage, this device only) ---------------- */
-  function localKey(n){ return 'forAmyBook:page'+n; }
+  // v2: pages now come pre-filled from book-content.js; the new key means anything saved
+  // before that (e.g. blank pages from an earlier visit) doesn't hide the built-in writing
+  function localKey(n){ return 'forPooksBook:v2:page'+n; }
 
   function loadPage(n){
     var data = { note:{}, images:[] };
+    var builtIn = window.BOOK_CONTENT && window.BOOK_CONTENT.pages && window.BOOK_CONTENT.pages[n];
+    if(builtIn) data = JSON.parse(JSON.stringify(builtIn)); // a copy, so edits never touch the original
     try{ var raw = localStorage.getItem(localKey(n)); if(raw) data = JSON.parse(raw); }catch(e){}
     return data;
   }
